@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../../admin/model/movie';
 import { AppService } from '../../admin/service/app-services.service';
-import { MicroservicesAddress } from '../../admin/service/microservices';
+import { MovieMicroservicesAddress } from '../../admin/service/movie-microservice';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class MovieListComponent implements OnInit {
   displayedColumns: string[];
   dataSource;
   nome;
-  constructor(private _appService: AppService, private _microservice: MicroservicesAddress) {
+  constructor(private _appService: AppService, private _microservice: MovieMicroservicesAddress) {
     this.displayedColumns = ['Title','Category', 'Schedule','Description', 'Edit', 'Remove'];
     _appService.get(_microservice.movieApi).subscribe(x => {
       this.movieList = x
