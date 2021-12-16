@@ -1,4 +1,4 @@
-<div style="margin-bottom: 10px">
+<div style="margin-top: 10px">
   <table style="width: 800;">
     <tr>
       <th style="color: black">Title</th>
@@ -11,4 +11,8 @@
       <td style="color: black">{{ d.schedule }}</td>
     </tr>
   </table>
+</div>
+<div style="margin-top: 10px">
+<input *ngIf="showLogin" type="submit" value="Log In" onclick="redirectLogin()">
+<input *ngIf="showCreate" type="submit" value="Create" onclick="redirectCreate()">
 </div>

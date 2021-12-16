@@ -26,9 +26,9 @@ export class AppService {
       });
   }
 
-  post(apiUrl, param)  {
+  post(apiUrl, param, opt)  {
 
-    return this._http.post(apiUrl, param)
+    return this._http.post(apiUrl, param, opt)
       .map((data: Response) => {
         return data.json();
       });

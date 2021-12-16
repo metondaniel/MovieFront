@@ -10,11 +10,14 @@ import { LoginComponent } from './account/login.component';
 import { MovieListComponent } from './movie/movie-list/movie-list.component';
 import { LoginModule } from './account/login.module';
 import { AppService } from './admin/service/app-services.service';
+import { MovieRegisterComponent } from './movie/movie-register/movie-register.component';
+import { MovieRegisterModule } from './movie/movie-register/movie-register.module';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'movie', component: MovieListComponent }
+  { path: 'movie', component: MovieListComponent },
+  { path: 'movie-register', component: MovieRegisterComponent }
 ];
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ const routes: Routes = [
     HttpModule,
     MovieModule,
     LoginModule,
+    MovieRegisterModule,
     [ RouterModule.forRoot(routes) ],
   ],
   providers: [AppService],

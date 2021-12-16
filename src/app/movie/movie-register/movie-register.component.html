@@ -1,0 +1,31 @@
+<form [formGroup]="formCreate" (ngSubmit)="save()">
+  <table width="100%">
+      <tr>
+        <td width="50%" valign="top">
+          <fieldset>
+            <legend>Access Page</legend>
+            <table>
+              <tr>
+                <td>Title: </td>
+                <td><input placeholder="Login" formControlName="description" maxlength="30" /></td>
+              </tr>
+              <tr>
+                <td>Category: </td>
+                <td><input placeholder="Password" formControlName="category" maxlength="30" /></td>
+              </tr>
+              <tr>
+                <td>Schedule: </td>
+                <td><input placeholder="Schedule" formControlName="schedule" maxlength="30" /></td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" value="Save"><input>
+        </td>
+      </tr>
+    </table>
+  </form>
+

@@ -34,10 +34,10 @@ export class LoginComponent implements OnInit {
       login : this.formLogin.controls['login'].value,
       password : this.formLogin.controls['password'].value
     }
-    this._appService.post(this._microservice.authApi,LoginModel).subscribe(x => {
+    this._appService.post(this._microservice.authApi,LoginModel,null).subscribe(x => {
       if (x.jwtToken !== undefined){
         localStorage.setItem('token',x.jwtToken);
-        this.router.navigate(['../movie/movie-list']);
+        this.router.navigate(['movie']);
       }
         else{
           alert('Invalid Credentials');
