@@ -1,6 +1,6 @@
 export class AuthMicroservicesAddress {
 
   // DEV
-  public authApi = 'http://localhost:62746/api/movie/';
+  public authApi = 'https://localhost:44387/authentication/signin';
 
 }

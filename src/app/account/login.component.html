@@ -1,4 +1,4 @@
-<form [formGroup]="formLogin" (ngSubmit)="login()">
+<form [formGroup]="formLogin" (ngSubmit)="save()">
 <table width="100%">
     <tr>
       <td width="50%" valign="top">
@@ -7,11 +7,11 @@
           <table>
             <tr>
               <td>Login: </td>
-              <td><input matInput placeholder="Login" formControlName="login" maxlength="30" /></td>
+              <td><input placeholder="Login" formControlName="login" maxlength="30" /></td>
             </tr>
             <tr>
               <td>Password: </td>
-              <td><input matInput placeholder="Password" formControlName="password" maxlength="30" /></td>
+              <td><input placeholder="Password" formControlName="password" maxlength="30" /></td>
             </tr>
           </table>
         </fieldset>
@@ -19,9 +19,9 @@
     </tr>
     <tr>
       <td>
-        <input type="button" title="Save"><input>
+        <input type="submit" value="Save"><input>
       </td>
     </tr>
-
   </table>
 </form>
+

@@ -1,54 +1,14 @@
-
-
-  <table width="100%">
+<div style="margin-bottom: 10px">
+  <table style="width: 800;">
     <tr>
-      <td width="50%" valign="top">
-        <fieldset>
-          <legend>Filtros</legend>
-          <table>
-            <tr>
-              <td>Title: </td>
-              <td><input matInput placeholder="Title" [(ngModel)]="title" maxlength="30" /></td>
-            </tr>
-            <tr>
-              <td></td>
-            </tr>
-            <tr>
-              <td><button mat-button (click)="eventClickSearch()" )>Pesquisar</button></td>
-              <td><button mat-button (click)="eventClickNew()" )>Cadastrar</button></td>
-            </tr>
-          </table>
-        </fieldset>
-      </td>
+      <th style="color: black">Title</th>
+      <th style="color: black">Category</th>
+      <th style="color: black">Schedule</th>
     </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-          <!--- Note that these columns can be defined in any order.
-      The actual rendered columns are set as a property on the row definition" -->
-          <!-- Position Column -->
-          <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell >  </td>
-      </ng-container>
-
-
-      <ng-container matColumnDef="weight">
-        <button mat-button  >Edit</button>
-      </ng-container>
-
-      <ng-container matColumnDef="symbol">
-        <button mat-button  >Remove</button>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
-      </td>
+    <tr *ngFor="let d of movieList">
+      <td style="color: black">{{ d.description }}</td>
+      <td style="color: black">{{ d.category }}</td>
+      <td style="color: black">{{ d.schedule }}</td>
     </tr>
   </table>
+</div>
